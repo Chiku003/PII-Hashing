@@ -4,7 +4,6 @@ import java.util.regex.Pattern;
 
 public class PiiPattern {
 
-    public static final Pattern NAME_PATTERN = Pattern.compile("[a-zA-Z\\s]+");
 
     public static final Pattern PHONE_PATTERN = Pattern.compile("\\d{10}");
 
