@@ -3,14 +3,13 @@ package com.rd.db;
 import java.sql.*;
 
 
-import static com.rd.db.DatabaseConfig.DB_URL;
+import static com.rd.db.DatabaseConfig.*;
 import static com.rd.scanner.PiiScanner.scanAndReplacePii;
 
 public class DataInserter {
 
 
-    private static final String USER = "admin";
-    private static final String PASSWORD = "admin";
+
 
     // Tables to insert data into
     private static final String TABLE_NAMES = "users";

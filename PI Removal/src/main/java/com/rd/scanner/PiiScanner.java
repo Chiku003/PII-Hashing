@@ -1,6 +1,6 @@
 package com.rd.scanner;
 
-import com.rd.db.DatabaseHelper;
+import com.rd.db.DatabaseConfig;
 import com.rd.pattern.PiiPattern;
 
 import java.security.MessageDigest;
@@ -15,7 +15,7 @@ public class PiiScanner {
     private static final String TABLE_NAME = "users";
 
     public static void scanAndReplacePii(String dbUrl) {
-        try (Connection conn = DatabaseHelper.getConnection(dbUrl)) {
+        try (Connection conn = DatabaseConfig.getConnection()) {
             String selectQuery = "SELECT id, name, email, address, gender FROM " + TABLE_NAME;
 
             try (PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
